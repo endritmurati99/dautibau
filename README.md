@@ -1,11 +1,7 @@
-# Dautibau — Trockenbau, Spachtelarbeiten & Innenausbau
+# Dautibau — Trockenbau und Innenausbau, Düsseldorf
 
-Statische Website (One-Pager) für **Dautibau** (Inhaber: Nexhbedin Dauti).
-Erster Konstrukt, gebaut mit der Lux-Pipeline (DNA: sebastian-cox · norm-architects · shinola).
+Statische Website (Eleventy build). Live: https://endritmurati99.github.io/dautibau/
 
-- Kernleistung: Trockenbau, abgehängte Decken, Spachtelarbeiten Q1–Q4, Bodenverlegung (Laminat/Vinyl)
-- Kontakt: 0176 23939474
-- Deploy: GitHub Pages via Actions (`.github/workflows/deploy-pages.yml`)
-
-> Hinweis: Adresse (Stadt/PLZ), E-Mail und Impressums-/Datenschutz-Angaben sind noch Platzhalter
-> und müssen vor einem öffentlichen Launch mit echten Daten gefüllt werden.
+Mehrseitig: Start, Leistungen (6 Detailseiten), Referenzen, Über uns, Kontakt, Impressum, Datenschutz.
+Deploy automatisch via GitHub Actions (.github/workflows/deploy-pages.yml) beim Push auf main.
+Quelle des Builds: lux-webflow/projects/dautibau/site (Eleventy).
