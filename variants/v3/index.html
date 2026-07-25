@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dautibau — Trockenbau &amp; Innenausbau in Düsseldorf</title>
+<meta name="description" content="Dautibau — Nexhbedin Dauti: Trockenbau, Spachtelarbeiten Q1–Q4, abgehängte Decken, Trennwände und Bodenverlegung in Düsseldorf. Sauber, maßhaltig, termintreu.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --tint:#F5F8FC;
+    --slate:#0F172A;
+    --muted:#475569;
+    --hair:#E2E8F0;
+    --blue:#2563EB;
+    --blue-dark:#1D4ED8;
+    --blue-soft:#EFF4FF;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.06);
+    --shadow-lg:0 12px 40px rgba(37,99,235,.14);
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Plus Jakarta Sans","Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--slate);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0 0 .5em;font-weight:700;}
+  h1{font-size:clamp(2rem,5vw,3.25rem);}
+  h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;}
+  h3{font-size:1.15rem;font-weight:600;}
+  p{margin:0 0 1rem;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  section{padding:72px 0;}
+  .tint{background:var(--tint);}
+  .eyebrow{
+    display:inline-block;
+    font-size:.82rem;font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--blue);
+    background:var(--blue-soft);
+    padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .lead{font-size:1.12rem;color:var(--muted);max-width:62ch;}
+  .muted{color:var(--muted);}
+  .center{text-align:center;}
+  .center .lead{margin-left:auto;margin-right:auto;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:inherit;font-size:1rem;font-weight:600;
+    padding:14px 24px;border-radius:12px;border:1px solid transparent;
+    cursor:pointer;transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+    line-height:1.1;
+  }
+  .btn:hover{text-decoration:none;transform:translateY(-1px);}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(37,99,235,.28);}
+  .btn-primary:hover{background:var(--blue-dark);box-shadow:0 10px 26px rgba(37,99,235,.34);color:#fff;}
+  .btn-ghost{background:#fff;color:var(--slate);border-color:var(--hair);box-shadow:var(--shadow);}
+  .btn-ghost:hover{border-color:#cbd5e1;color:var(--slate);}
+  .btn-wa{background:#F0FDF4;color:#15803D;border-color:#BBF7D0;}
+  .btn-wa:hover{background:#DCFCE7;color:#166534;}
+  .btn svg{width:20px;height:20px;flex:none;}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.9);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--hair);
+  }
+  .nav{display:flex;align-items:center;gap:20px;height:72px;}
+  .brand{font-weight:700;font-size:1.35rem;letter-spacing:-.02em;color:var(--slate);display:flex;align-items:center;gap:9px;}
+  .brand:hover{text-decoration:none;color:var(--slate);}
+  .brand .dot{width:11px;height:11px;border-radius:3px;background:var(--blue);display:inline-block;}
+  .nav-links{display:flex;gap:6px;margin-left:14px;}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:.95rem;padding:8px 12px;border-radius:8px;}
+  .nav-links a:hover{color:var(--slate);background:var(--tint);text-decoration:none;}
+  .nav-cta{margin-left:auto;display:flex;align-items:center;gap:10px;}
+  .phone-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:600;color:var(--blue);background:var(--blue-soft);
+    padding:10px 16px;border-radius:10px;font-size:.95rem;
+  }
+  .phone-btn:hover{text-decoration:none;background:#E3ECFF;}
+  .phone-btn svg{width:18px;height:18px;}
+  .nav-toggle{display:none;}
+
+  /* Hero */
+  .hero{padding:70px 0 76px;background:
+    radial-gradient(900px 420px at 82% -8%, rgba(37,99,235,.10), transparent 60%),
+    linear-gradient(180deg,#fff, var(--tint));}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;}
+  .hero h1 span{color:var(--blue);}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 18px;}
+  .trustline{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem;font-weight:500;}
+  .trustline svg{width:18px;height:18px;color:var(--blue);flex:none;}
+  .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+  .stat{background:#fff;border:1px solid var(--hair);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);}
+  .stat b{display:block;font-size:1.5rem;font-weight:700;color:var(--slate);line-height:1.1;}
+  .stat span{font-size:.85rem;color:var(--muted);}
+  .hero-visual{
+    background:#fff;border:1px solid var(--hair);border-radius:24px;
+    box-shadow:var(--shadow-lg);padding:22px;position:relative;overflow:hidden;
+  }
+  .hero-visual svg{width:100%;height:auto;}
+  .hero-badge{
+    position:absolute;left:22px;bottom:22px;
+    background:#fff;border:1px solid var(--hair);border-radius:12px;
+    padding:10px 14px;box-shadow:var(--shadow);font-size:.85rem;font-weight:600;
+    display:flex;align-items:center;gap:8px;
+  }
+  .hero-badge span{width:9px;height:9px;border-radius:50%;background:#22C55E;display:inline-block;}
+
+  /* Section head */
+  .sec-head{max-width:64ch;margin-bottom:40px;}
+  .sec-head.center{margin-left:auto;margin-right:auto;}
+
+  /* Icon chip */
+  .chip{
+    width:52px;height:52px;border-radius:14px;
+    background:var(--blue-soft);color:var(--blue);
+    display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .chip svg{width:26px;height:26px;}
+
+  /* Grids */
+  .grid{display:grid;gap:22px;}
+  .cols-4{grid-template-columns:repeat(4,1fr);}
+  .cols-3{grid-template-columns:repeat(3,1fr);}
+  .card{
+    background:#fff;border:1px solid var(--hair);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#dbe4f0;}
+  .card h3{margin-bottom:8px;}
+  .card p{margin:0;color:var(--muted);font-size:.96rem;}
+
+  /* Ablauf */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step;}
+  .step{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);position:relative;}
+  .step .num{
+    width:44px;height:44px;border-radius:12px;background:var(--blue);color:#fff;
+    font-weight:700;font-size:1.15rem;display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .step h3{margin-bottom:6px;}
+  .step p{margin:0;color:var(--muted);font-size:.94rem;}
+
+  /* CTA band */
+  .cta-band{background:var(--blue-soft);border-radius:24px;padding:52px 40px;text-align:center;border:1px solid #DDE6FF;}
+  .cta-band h2{margin-bottom:10px;}
+  .cta-band .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px;}
+
+  /* Referenzen */
+  .ref-tile{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+  .ref-tile .art{background:var(--blue-soft);}
+  .ref-tile .art svg{width:100%;height:auto;display:block;}
+  .ref-cap{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .ref-cap .t{font-weight:600;font-size:.98rem;}
+  .badge-ph{font-size:.72rem;font-weight:600;color:var(--muted);background:var(--tint);border:1px solid var(--hair);padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .ref-note{margin-top:22px;text-align:center;color:var(--muted);font-size:.92rem;}
+
+  /* Über uns */
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start;}
+  .check-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+  .check-list li{display:flex;gap:12px;align-items:flex-start;color:var(--slate);font-weight:500;}
+  .check-list li svg{width:22px;height:22px;color:var(--blue);flex:none;margin-top:1px;}
+  .about-card{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);}
+  .about-card h3{margin-bottom:16px;}
+
+  /* Kontakt */
+  .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start;}
+  .big-phone{display:inline-flex;align-items:center;gap:12px;font-size:1.6rem;font-weight:700;color:var(--slate);margin:6px 0 4px;}
+  .big-phone:hover{color:var(--blue);text-decoration:none;}
+  .big-phone .ic{width:46px;height:46px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;}
+  .big-phone .ic svg{width:24px;height:24px;}
+  .addr{background:var(--tint);border:1px solid var(--hair);border-radius:14px;padding:20px 22px;margin-top:24px;font-style:normal;color:var(--muted);}
+  .addr strong{color:var(--slate);display:block;margin-bottom:4px;}
+  form.contact{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);}
+  .field{margin-bottom:18px;}
+  .field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:7px;color:var(--slate);}
+  .field input,.field textarea{
+    width:100%;font-family:inherit;font-size:1rem;color:var(--slate);
+    padding:12px 14px;border:1px solid var(--hair);border-radius:10px;background:#fff;
+  }
+  .field input:focus,.field textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue);}
+  .field textarea{min-height:120px;resize:vertical;}
+  .form-note{font-size:.85rem;color:var(--muted);margin:12px 0 0;}
+
+  /* Legal */
+  .legal h2{font-size:1.5rem;}
+  .legal p, .legal address{color:var(--muted);font-style:normal;max-width:72ch;}
+  .legal strong{color:var(--slate);}
+  .todo{color:#B45309;font-weight:600;}
+  .legal-note{background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:16px 18px;color:#92400E;font-size:.92rem;margin-top:18px;}
+
+  /* Footer */
+  footer.site{background:var(--slate);color:#CBD5E1;padding:56px 0 40px;}
+  footer.site .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;}
+  footer.site .brand{color:#fff;}
+  footer.site a{color:#CBD5E1;}
+  footer.site a:hover{color:#fff;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+  .foot-bottom{border-top:1px solid #1E293B;margin-top:32px;padding-top:22px;font-size:.88rem;color:#94A3B8;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* Mobile call bar */
+  .callbar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:#fff;border-top:1px solid var(--hair);
+    box-shadow:0 -6px 24px rgba(15,23,42,.10);
+    padding:10px 12px;gap:10px;
+  }
+  .callbar a{flex:1;justify-content:center;padding:13px 10px;}
+
+  /* Motion (safe: only enhance, content visible by default) */
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+
+  /* Responsive */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:30px;}
+    .cols-4,.steps{grid-template-columns:repeat(2,1fr);}
+    .cols-3{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+  }
+  @media (max-width:640px){
+    section{padding:52px 0;}
+    .cols-4,.cols-3,.steps{grid-template-columns:1fr;}
+    .phone-btn span{display:none;}
+    .nav-cta .btn span.long{display:none;}
+    .callbar{display:flex;}
+    body{padding-bottom:72px;}
+    .cta-band{padding:40px 22px;}
+    .hero-cta .btn{flex:1;justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Dautibau</a>
+      <div class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="nav-cta">
+        <a class="phone-btn" href="tel:+4917623939474" aria-label="Anrufen: 0176 23939474">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.34 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.29 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0176 23939474</span>
+        </a>
+        <a class="btn btn-primary" href="#kontakt">Angebot<span class="long"> anfragen</span></a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Trockenbau &amp; Innenausbau in Düsseldorf</span>
+        <h1>Saubere Wände, gerade Decken &amp; <span>streiflicht-fertige</span> Spachtelarbeiten.</h1>
+        <p class="lead">Trockenbauwände, abgehängte Decken, Spachtel bis Q4 und Laminat/Vinyl — sauber, maßhaltig und termintreu. Jahrelange Erfahrung, ein Ansprechpartner vom Anruf bis zur besenreinen Übergabe.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+4917623939474">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.34 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.29 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+            Kostenloses Angebot
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/4917623939474">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="trustline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Kostenlos &amp; unverbindlich · Festpreis
+        </div>
+        <div class="stats">
+          <div class="stat"><b>Q1–Q4</b><span>Spachtel nach Norm</span></div>
+          <div class="stat"><b>1</b><span>Ansprechpartner</span></div>
+          <div class="stat"><b>Düsseldorf</b><span>&amp; Umkreis</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Illustration eines sauberen Raums mit gerader Wand, abgehängter Decke und Wasserwaage">
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#EFF4FF"/>
+              <stop offset="1" stop-color="#F5F8FC"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="520" height="400" rx="16" fill="url(#hg)"/>
+          <!-- room -->
+          <rect x="40" y="40" width="440" height="320" rx="10" fill="#fff" stroke="#DDE6FF"/>
+          <!-- ceiling grid (abgehängte Decke) -->
+          <g stroke="#C7D7FF" stroke-width="2">
+            <line x1="60" y1="90" x2="460" y2="90"/>
+            <line x1="130" y1="60" x2="130" y2="90"/>
+            <line x1="210" y1="60" x2="210" y2="90"/>
+            <line x1="290" y1="60" x2="290" y2="90"/>
+            <line x1="370" y1="60" x2="370" y2="90"/>
+          </g>
+          <!-- wall panel -->
+          <rect x="70" y="120" width="180" height="210" rx="8" fill="#F5F8FC" stroke="#DDE6FF"/>
+          <!-- studs -->
+          <g stroke="#C7D7FF" stroke-width="3">
+            <line x1="115" y1="130" x2="115" y2="320"/>
+            <line x1="160" y1="130" x2="160" y2="320"/>
+            <line x1="205" y1="130" x2="205" y2="320"/>
+          </g>
+          <!-- level (Wasserwaage) -->
+          <g transform="rotate(-6 380 200)">
+            <rect x="280" y="185" width="220" height="34" rx="8" fill="#2563EB"/>
+            <rect x="368" y="193" width="44" height="18" rx="9" fill="#DBEAFE"/>
+            <circle cx="390" cy="202" r="6" fill="#fff"/>
+            <line x1="382" y1="188" x2="382" y2="216" stroke="#1D4ED8" stroke-width="2"/>
+            <line x1="398" y1="188" x2="398" y2="216" stroke="#1D4ED8" stroke-width="2"/>
+          </g>
+          <!-- floor board -->
+          <rect x="70" y="300" width="380" height="30" rx="6" fill="#E7EEFF" stroke="#DDE6FF"/>
+          <g stroke="#C7D7FF" stroke-width="2">
+            <line x1="150" y1="300" x2="150" y2="330"/>
+            <line x1="230" y1="300" x2="230" y2="330"/>
+            <line x1="310" y1="300" x2="310" y2="330"/>
+            <line x1="390" y1="300" x2="390" y2="330"/>
+          </g>
+        </svg>
+        <div class="hero-badge"><span aria-hidden="true"></span>Besenrein übergeben</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP -->
+  <section class="tint" id="warum">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">Warum Dautibau</span>
+        <h2>Verlässlich von der ersten Wand bis zur Abnahme</h2>
+        <p class="lead">Klare Preise, feste Termine und eine saubere Baustelle — damit Sie sich auf das Ergebnis verlassen können.</p>
+      </div>
+      <div class="grid cols-4">
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3>Festpreis</h3>
+          <p>Kostenloses, unverbindliches Angebot mit klaren Preisen — ohne böse Überraschungen.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Termintreu &amp; sauber</h3>
+          <p>Abgedeckte Baustelle, feste Termine und besenreine Übergabe — pünktlich und ordentlich.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Q1–Q4 nach Norm</h3>
+          <p>Spachtelqualität nach vereinbarter Stufe — Q2 Standard bis Q4 für Streiflicht und Lasuren.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+          <h3>Ein Ansprechpartner</h3>
+          <p>Persönlich betreut in Düsseldorf &amp; Umkreis — vom Anruf bis zur Abnahme aus einer Hand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Leistungen</span>
+        <h2>Alles rund um Trockenbau &amp; Innenausbau</h2>
+        <p class="lead">Von der Ständerwand bis zum verlegten Boden — sauber ausgeführt und maßhaltig.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span>
+          <h3>Trockenbau &amp; Trennwände</h3>
+          <p>Ständerwände (Rigips), Raumteiler und Vorsatzschalen — inklusive Dämmung &amp; Schallschutz.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18"/><path d="M6 7v3M10 7v4M14 7v3M18 7v4"/><rect x="3" y="14" width="18" height="6" rx="1"/></svg></span>
+          <h3>Abgehängte &amp; Akustikdecken</h3>
+          <p>Deckenabhängung nach Maß, Lichtvouten sowie Akustik- und Rasterdecken.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l7-7"/><path d="M14 6l4 4"/><path d="M13 3l8 8-9 9H4v-8z"/></svg></span>
+          <h3>Spachtelarbeiten Q1–Q4</h3>
+          <p>Q2 als Standard, Q3/Q4 für Streiflicht und Lasuren — geschliffen und malerfertig.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v6M15 10v10M3 16h6"/></svg></span>
+          <h3>Boden verlegen</h3>
+          <p>Laminat, Designboden sowie Klick- und Rigid-Vinyl — mit Sockelleisten &amp; Übergängen.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M4 12h16M4 16h16M12 8v13"/></svg></span>
+          <h3>Dämmung &amp; Schallschutz</h3>
+          <p>Wände, Decken und Dachschräge, Trittschall sowie spürbar bessere Raumakustik.</p>
+        </div>
+        <div class="card">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 0 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.1-.5-.5-2.1z"/></svg></span>
+          <h3>Renovierung &amp; Innenausbau</h3>
+          <p>Wand- und Deckenreparatur, Dachgeschoss-Ausbau — Übergabe besenrein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section class="tint" id="ablauf">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">Ablauf</span>
+        <h2>In vier klaren Schritten zum Ergebnis</h2>
+        <p class="lead">Unkompliziert, transparent und termintreu — Sie wissen immer, woran Sie sind.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num" aria-hidden="true">1</div>
+          <h3>Anruf &amp; Beratung</h3>
+          <p>Kurzes Gespräch per Telefon oder WhatsApp — wir klären Ihr Vorhaben.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">2</div>
+          <h3>Aufmaß &amp; Festpreis</h3>
+          <p>Aufmaß vor Ort und ein Festpreis-Angebot — kostenlos und unverbindlich.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">3</div>
+          <h3>Saubere Ausführung</h3>
+          <p>Umsetzung zur vereinbarten Qualitätsstufe, termintreu und mit abgedeckter Baustelle.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">4</div>
+          <h3>Übergabe</h3>
+          <p>Gemeinsame Abnahme — malerfertig und besenrein übergeben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Reden wir über Ihr Projekt</h2>
+        <p class="lead" style="margin:0 auto;">Erzählen Sie kurz, was ansteht — Sie erhalten schnell ein klares, unverbindliches Angebot.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="tel:+4917623939474">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.34 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.29 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+            0176 23939474
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/4917623939474">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            WhatsApp schreiben
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENZEN -->
+  <section class="tint" id="referenzen">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">Referenzen</span>
+        <h2>Ein Eindruck von der Arbeit</h2>
+        <p class="lead">Erste Beispiele als Platzhalter — echte Baustellenfotos folgen in Kürze.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="ref-tile">
+          <div class="art">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Platzhalter: Q3-Wand im Wohnraum">
+              <rect width="400" height="260" fill="#EFF4FF"/>
+              <rect x="30" y="30" width="340" height="200" rx="10" fill="#fff" stroke="#C7D7FF"/>
+              <rect x="60" y="60" width="150" height="140" rx="6" fill="#F5F8FC" stroke="#DDE6FF"/>
+              <line x1="250" y1="70" x2="340" y2="70" stroke="#C7D7FF" stroke-width="3"/>
+              <line x1="250" y1="110" x2="340" y2="110" stroke="#C7D7FF" stroke-width="3"/>
+              <line x1="250" y1="150" x2="310" y2="150" stroke="#C7D7FF" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="ref-cap"><span class="t">Q3-Wand · Wohnraum</span><span class="badge-ph">Platzhalter</span></div>
+        </div>
+        <div class="ref-tile">
+          <div class="art">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Platzhalter: abgehängte Decke mit Vouten">
+              <rect width="400" height="260" fill="#EFF4FF"/>
+              <rect x="30" y="30" width="340" height="200" rx="10" fill="#fff" stroke="#C7D7FF"/>
+              <rect x="60" y="60" width="280" height="40" rx="6" fill="#F5F8FC" stroke="#DDE6FF"/>
+              <rect x="60" y="120" width="280" height="80" rx="6" fill="#F5F8FC" stroke="#DDE6FF"/>
+              <line x1="90" y1="120" x2="90" y2="200" stroke="#C7D7FF" stroke-width="2"/>
+              <line x1="150" y1="120" x2="150" y2="200" stroke="#C7D7FF" stroke-width="2"/>
+              <line x1="210" y1="120" x2="210" y2="200" stroke="#C7D7FF" stroke-width="2"/>
+              <line x1="270" y1="120" x2="270" y2="200" stroke="#C7D7FF" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="ref-cap"><span class="t">Abgehängte Decke · Vouten</span><span class="badge-ph">Platzhalter</span></div>
+        </div>
+        <div class="ref-tile">
+          <div class="art">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Platzhalter: verlegtes Klick-Vinyl in der Diele">
+              <rect width="400" height="260" fill="#EFF4FF"/>
+              <rect x="30" y="30" width="340" height="200" rx="10" fill="#fff" stroke="#C7D7FF"/>
+              <g fill="#F5F8FC" stroke="#DDE6FF">
+                <rect x="55" y="70" width="130" height="26" rx="4"/>
+                <rect x="200" y="70" width="145" height="26" rx="4"/>
+                <rect x="55" y="108" width="150" height="26" rx="4"/>
+                <rect x="220" y="108" width="125" height="26" rx="4"/>
+                <rect x="55" y="146" width="120" height="26" rx="4"/>
+                <rect x="190" y="146" width="155" height="26" rx="4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="ref-cap"><span class="t">Klick-Vinyl · Diele</span><span class="badge-ph">Platzhalter</span></div>
+        </div>
+      </div>
+      <p class="ref-note">Hinweis: Dies sind Platzhalter — echte Baustellenfotos ersetzen diese Kacheln vor dem Launch.</p>
+    </div>
+  </section>
+
+  <!-- ÜBER UNS -->
+  <section id="ueber-uns">
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">Über uns</span>
+        <h2>Trockenbau mit Handschlagqualität</h2>
+        <p class="lead">Mein Name ist Nexhbedin Dauti. Seit Jahren stehe ich für sauberen Trockenbau und verspachtele bis Q4 — für Wände und Decken, die auch im Streiflicht überzeugen.</p>
+        <p class="muted">Bei mir haben Sie einen Ansprechpartner vom ersten Anruf bis zur besenreinen Übergabe. Feste Termine und klare Preise sind für mich selbstverständlich, damit Ihr Projekt planbar bleibt und das Ergebnis stimmt.</p>
+      </div>
+      <div class="about-card">
+        <h3>Warum Dautibau</h3>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Ein Ansprechpartner — persönlich und zuverlässig</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Spachtel bis Q4 — streiflicht-fertig</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Feste Termine &amp; klare Festpreise</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Saubere, abgedeckte Baustelle</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Besenreine Übergabe in Düsseldorf &amp; Umkreis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="tint" id="kontakt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Angebot anfragen</h2>
+        <p class="lead">Am schnellsten per Anruf oder WhatsApp — oder schreiben Sie kurz über das Formular.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <a class="big-phone" href="tel:+4917623939474">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.34 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.29 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg></span>
+            0176 23939474
+          </a>
+          <p class="muted">Erreichbar in Düsseldorf &amp; Umkreis. Kostenlos und unverbindlich.</p>
+          <p><a class="btn btn-wa" href="https://wa.me/4917623939474">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            WhatsApp schreiben
+          </a></p>
+          <address class="addr">
+            <strong>Dautibau — Nexhbedin Dauti</strong>
+            Münsterstraße 360<br>
+            40470 Düsseldorf
+          </address>
+        </div>
+        <form class="contact" onsubmit="return false" aria-label="Kontaktformular">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Ihr Name">
+          </div>
+          <div class="field">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Für Ihren Rückruf">
+          </div>
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Was steht an? Kurz beschreiben — z. B. Wand, Decke, Boden, Fläche in m²."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Anfrage senden</button>
+          <p class="form-note">Hinweis: Dieses Formular ist ein Platzhalter und wird vor dem Launch mit einem E-Mail-Versand verbunden. Am schnellsten erreichen Sie uns telefonisch oder per WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section class="legal" id="impressum">
+    <div class="wrap">
+      <span class="eyebrow">Rechtliches</span>
+      <h2>Impressum</h2>
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <p>
+        <strong>Diensteanbieter</strong><br>
+        Nexhbedin Dauti — Dautibau<br>
+        Münsterstraße 360<br>
+        40470 Düsseldorf
+      </p>
+      <p>
+        <strong>Kontakt</strong><br>
+        Telefon: <a href="tel:+4917623939474">0176 23939474</a><br>
+        E-Mail: <span class="todo">TODO — E-Mail-Adresse vor Launch eintragen</span>
+      </p>
+      <p><strong>Rechtsform / Umsatzsteuer:</strong> <span class="todo">TODO — Rechtsform und USt-IdNr. bzw. Hinweis auf Kleinunternehmerregelung nach § 19 UStG sowie Eintrag in die Handwerksrolle vor dem Launch ergänzen.</span></p>
+      <div class="legal-note">Hinweis: Impressum und Datenschutzerklärung sind in Deutschland gesetzlich verpflichtend. Die hier gezeigten Angaben sind Platzhalter und müssen vor der Veröffentlichung vollständig und korrekt ausgefüllt werden.</div>
+    </div>
+  </section>
+
+  <!-- DATENSCHUTZ -->
+  <section class="legal tint" id="datenschutz">
+    <div class="wrap">
+      <span class="eyebrow">Rechtliches</span>
+      <h2>Datenschutz</h2>
+      <p>Diese Website wird als statische Seite über GitHub Pages bereitgestellt. Es werden keine Marketing- oder Tracking-Cookies gesetzt.</p>
+      <p>Kontaktdaten, die Sie uns telefonisch, per WhatsApp oder über das Kontaktformular übermitteln, werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
+      <p><strong>Verantwortlich:</strong> Nexhbedin Dauti — Dautibau, Münsterstraße 360, 40470 Düsseldorf.</p>
+      <div class="legal-note">Hinweis: Dies ist ein Platzhalter-Text. Vor dem Launch ist er durch eine vollständige, rechtskonforme Datenschutzerklärung zu ersetzen.</div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><span class="dot" aria-hidden="true"></span>Dautibau</div>
+        <p style="margin-top:12px;max-width:34ch;">Trockenbau &amp; Innenausbau · Düsseldorf. Sauber, maßhaltig, termintreu.</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer-Navigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Dautibau · Nexhbedin Dauti</span>
+      <span>Trockenbau &amp; Innenausbau · Düsseldorf</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE CALL BAR -->
+<div class="callbar" aria-label="Schnellkontakt">
+  <a class="btn btn-primary" href="tel:+4917623939474">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.9.34 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.29 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+    Anrufen
+  </a>
+  <a class="btn btn-wa" href="https://wa.me/4917623939474">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Dautibau — Nexhbedin Dauti","description":"Trockenbau, Spachtelarbeiten (Q1–Q4), abgehängte Decken, Trennwände und Bodenverlegung in Düsseldorf.","telephone":"+4917623939474","areaServed":"Düsseldorf","address":{"@type":"PostalAddress","streetAddress":"Münsterstraße 360","postalCode":"40470","addressLocality":"Düsseldorf","addressCountry":"DE"},"url":"https://endritmurati99.github.io/dautibau/v3/"}</script>
+
+</body>
+</html>

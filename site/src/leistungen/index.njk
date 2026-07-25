@@ -1,0 +1,52 @@
+---
+layout: base.njk
+permalink: /leistungen/
+title: "Leistungen | Trockenbau und Innenausbau Düsseldorf | Dautibau"
+description: "Alle Leistungen von Dautibau in Düsseldorf. Trockenbau, Trennwände, abgehängte Decken, Spachtelarbeiten Q1 bis Q4, Bodenverlegung, Dämmung und Renovierung."
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current">Leistungen</span>
+    </nav>
+    <p class="kicker">Leistungen. Düsseldorf und Umgebung.</p>
+    <h1>Ein Gewerk. Ein Verantwortlicher.</h1>
+    <p class="page-lead">Von der Trennwand bis zum fertigen Boden. Sechs Leistungen, sauber ausgeführt und aus einer Hand.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="svc-grid">
+      {% for s in services %}
+      <article class="svc-card" data-reveal data-reveal-delay="{{ loop.index0 * 60 }}">
+        <span class="svc-num">{{ s.num }}</span>
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: 1.55rem; line-height: 1.08;">{{ s.teaserTitle }}</h2>
+        <p>{{ s.teaserText }}</p>
+        <a href="{{ ('/leistungen/' + s.slug + '/') | url }}" class="link-draw">
+          Mehr dazu <span class="arrow" aria-hidden="true">→</span>
+          <span class="visually-hidden"> zu {{ s.teaserTitle }}</span>
+        </a>
+        <a class="stretch" href="{{ ('/leistungen/' + s.slug + '/') | url }}" aria-label="{{ s.teaserTitle }}" tabindex="-1"></a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="lst-cta">
+  <div class="shell band-inner on-dark">
+    <div data-reveal>
+      <p class="kicker">Nicht sicher</p>
+      <h2 id="lst-cta">Nicht sicher, was Sie brauchen?</h2>
+      <p>Rufen Sie an. Wir schauen uns Ihre Räume an und sagen ehrlich, was sinnvoll ist.</p>
+    </div>
+    <div class="band-cta" data-reveal data-reveal-delay="80">
+      <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+---
+layout: base.njk
+permalink: /kontakt/
+title: "Kontakt | Dautibau | Trockenbau Düsseldorf anrufen"
+description: "Kontakt zu Dautibau in Düsseldorf. Telefon 0176 23939474, WhatsApp und Kontaktformular. Münsterstraße 360, 40470 Düsseldorf. Festpreis unverbindlich."
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current">Kontakt</span>
+    </nav>
+    <p class="kicker">Kontakt. Düsseldorf und Umgebung.</p>
+    <h1>Ein Anruf reicht.</h1>
+    <p class="page-lead">Telefon ist der schnellste Weg. Wir schauen uns Ihre Räume an und machen Ihnen ein Festpreis-Angebot.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="contact-grid">
+      <div data-reveal>
+        <p class="kicker">Direkt anrufen</p>
+        <a href="{{ site.phoneHref }}" class="big-phone">0176 23939474</a>
+        <div class="cta-inline-row" style="margin-bottom: 2.5rem;">
+          <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
+          <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+        </div>
+
+        <div class="contact-block">
+          <h2>Adresse</h2>
+          <p class="contact-meta">
+            Dautibau<br>
+            Münsterstraße 360<br>
+            40470 Düsseldorf
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <h2>Einzugsgebiet</h2>
+          <p class="contact-meta">Düsseldorf und Umgebung.</p>
+        </div>
+
+        <div class="frame frame-wide" style="margin-top: 1rem;">
+          <span class="frame-caption">Karte folgt</span>
+        </div>
+      </div>
+
+      <div data-reveal data-reveal-delay="80">
+        <p class="kicker" style="margin-bottom: 1.5rem;">Oder schreiben</p>
+        <form class="form" aria-label="Kontaktformular" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <p class="form-note">
+            Der Versand-Endpunkt für dieses Formular wird noch eingerichtet.
+            Am schnellsten erreichen Sie uns direkt per Telefon oder WhatsApp.
+          </p>
+          <button type="submit" class="btn btn-ink" disabled aria-disabled="true">Formular folgt in Kürze</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

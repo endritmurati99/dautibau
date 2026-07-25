@@ -1,0 +1,21 @@
+export default {
+  name: "Dautibau",
+  owner: "Nexhbedin Dauti",
+  tagline: "Trockenbau und Innenausbau",
+  city: "Düsseldorf",
+  phoneDisplay: "0176 23939474",
+  phoneHref: "tel:+4917623939474",
+  whatsapp: "https://wa.me/4917623939474",
+  street: "Münsterstraße 360",
+  zip: "40470",
+  region: "Düsseldorf und Umgebung",
+  email: "[E-Mail folgt]",
+  url: "https://endritmurati99.github.io/dautibau",
+  nav: [
+    { title: "Start", url: "/" },
+    { title: "Leistungen", url: "/leistungen/" },
+    { title: "Referenzen", url: "/referenzen/" },
+    { title: "Über uns", url: "/ueber-uns/" },
+    { title: "Kontakt", url: "/kontakt/" },
+  ],
+};

@@ -1,0 +1,210 @@
+---
+layout: base.njk
+permalink: /
+title: "Dautibau | Trockenbau und Innenausbau in Düsseldorf"
+description: "Dautibau baut Trockenbau, Decken und Böden in Düsseldorf. Ein Ansprechpartner vom Aufmaß bis zur Übergabe. Festpreis kostenlos und unverbindlich."
+---
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-inner">
+    <p class="kicker hero-kicker">Trockenbau und Innenausbau. Düsseldorf.</p>
+    <h1 class="hero-title" id="hero-title">Gerade Wände sind kein <span class="em">Zufall.</span></h1>
+    <div class="hero-lower">
+      <p class="hero-sub" data-reveal>
+        Dautibau baut Trockenbau, Decken und Böden, die im Streiflicht bestehen.
+        Ein Ansprechpartner vom Aufmaß bis zur Übergabe.
+      </p>
+      <div class="hero-cta-block" data-reveal data-reveal-delay="80">
+        <div class="hero-cta-row">
+          <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
+          <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+        </div>
+        <p class="hero-trust">
+          Jahrelange Erfahrung im Raum Düsseldorf.<br>
+          Festpreis kostenlos und unverbindlich.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="Warum Dautibau in Kürze">
+  <ul>
+    <li>Ein Ansprechpartner</li>
+    <li>Saubere Arbeit</li>
+    <li>Termine, die halten</li>
+    <li>Festpreis unverbindlich</li>
+  </ul>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Trockenbau</span>
+    <span class="marquee-item">Trennwände</span>
+    <span class="marquee-item">Akustikdecken</span>
+    <span class="marquee-item">Spachtel Q4</span>
+    <span class="marquee-item">Vinyl</span>
+    <span class="marquee-item">Dämmung</span>
+    <span class="marquee-item">Renovierung</span>
+    <span class="marquee-item">Düsseldorf</span>
+  </div>
+</div>
+
+<!-- LEISTUNGEN TEASER -->
+<section class="section" aria-labelledby="svc-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="h-section head-title" id="svc-heading">Was wir bauen.</h2>
+      <p class="head-lead">Sechs Gewerke, ein Verantwortlicher. Jede Leistung mit eigener Detailseite und klarem Nutzen.</p>
+    </div>
+    <div class="svc-grid">
+      {% for s in services %}
+      <article class="svc-card" data-reveal data-reveal-delay="{{ loop.index0 * 60 }}">
+        <span class="svc-num">{{ s.num }}</span>
+        <h3>{{ s.teaserTitle }}</h3>
+        <p>{{ s.teaserText }}</p>
+        <a href="{{ ('/leistungen/' + s.slug + '/') | url }}" class="link-draw">
+          Mehr dazu <span class="arrow" aria-hidden="true">→</span>
+          <span class="visually-hidden"> zu {{ s.teaserTitle }}</span>
+        </a>
+        <a class="stretch" href="{{ ('/leistungen/' + s.slug + '/') | url }}" aria-label="{{ s.teaserTitle }}" tabindex="-1"></a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- WARUM DAUTIBAU -->
+<section class="section" aria-labelledby="why-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="h-section head-title" id="why-heading">Warum Dautibau.</h2>
+      <p class="head-lead">Handwerk, das man ernst nehmen kann. Vier Dinge, auf die Sie sich verlassen.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item" data-reveal>
+        <span class="why-index">01</span>
+        <h3>Ein Ansprechpartner.</h3>
+        <p>Sie reden mit dem, der die Arbeit macht. Kein Callcenter und keine Weitergabe.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="60">
+        <span class="why-index">02</span>
+        <h3>Saubere Baustelle.</h3>
+        <p>Wir arbeiten ordentlich und räumen hinter uns auf. Ihr Zuhause bleibt bewohnbar.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="120">
+        <span class="why-index">03</span>
+        <h3>Termine, die halten.</h3>
+        <p>Wir sagen, wann wir kommen. Und dann kommen wir auch.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="180">
+        <span class="why-index">04</span>
+        <h3>Festpreis vorab.</h3>
+        <p>Sie wissen vorher, was es kostet. Das Angebot ist kostenlos und unverbindlich.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section class="section" aria-labelledby="flow-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="h-section head-title" id="flow-heading">So läuft es ab.</h2>
+      <p class="head-lead">Vier Schritte vom ersten Anruf bis zur besenreinen Übergabe.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal>
+        <span class="step-num">01</span>
+        <h3>Anruf und Aufmaß.</h3>
+        <p>Sie rufen an, wir kommen vorbei und schauen uns alles in Ruhe an.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="60">
+        <span class="step-num">02</span>
+        <h3>Festpreis-Angebot.</h3>
+        <p>Sie bekommen einen klaren Preis. Ohne Kleingedrucktes.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="120">
+        <span class="step-num">03</span>
+        <h3>Saubere Ausführung.</h3>
+        <p>Wir bauen termintreu und halten die Baustelle ordentlich.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="180">
+        <span class="step-num">04</span>
+        <h3>Übergabe.</h3>
+        <p>Wir übergeben fertig und besenrein. Erst dann sind wir fertig.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZEN TEASER -->
+<section class="section" aria-labelledby="ref-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="h-section head-title" id="ref-heading">Arbeit, die man sehen darf.</h2>
+      <p class="head-lead">Echte Projektfotos folgen in Kürze. Bis dahin zeigen wir, worauf es ankommt.</p>
+    </div>
+    <div class="ref-gallery">
+      <div class="frame frame-duotone" data-reveal>
+        <span class="frame-caption">Projektfoto folgt</span>
+      </div>
+      <div class="frame" data-reveal data-reveal-delay="80">
+        <span class="frame-caption">Projektfoto folgt</span>
+      </div>
+      <div class="frame frame-wide" data-reveal data-reveal-delay="140">
+        <span class="frame-caption">Projektfoto folgt</span>
+      </div>
+    </div>
+    <p style="margin-top: 2rem;">
+      <a href="{{ '/referenzen/' | url }}" class="link-draw">Alle Referenzen <span class="arrow" aria-hidden="true">→</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- KONTAKT BAND -->
+<section class="band" aria-labelledby="cta-heading">
+  <div class="shell band-inner on-dark">
+    <div data-reveal>
+      <p class="kicker">Reden wir</p>
+      <h2 id="cta-heading">Reden wir über Ihr Projekt.</h2>
+      <p>Ein Anruf reicht. Wir schauen uns Ihre Räume an und machen Ihnen ein Festpreis-Angebot.</p>
+    </div>
+    <div class="band-cta" data-reveal data-reveal-delay="80">
+      <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+    </div>
+  </div>
+</section>
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/#business",
+  "name": "Dautibau",
+  "description": "Trockenbau und Innenausbau in Düsseldorf. Trockenbau, Trennwände, abgehängte Decken, Spachtelarbeiten, Bodenverlegung, Dämmung und Renovierung.",
+  "url": "{{ site.url }}/",
+  "telephone": "+4917623939474",
+  "founder": "Nexhbedin Dauti",
+  "areaServed": "Düsseldorf und Umgebung",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Münsterstraße 360",
+    "postalCode": "40470",
+    "addressLocality": "Düsseldorf",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "knowsAbout": ["Trockenbau", "Trennwände", "Akustikdecken", "Spachtelarbeiten", "Bodenverlegung", "Dämmung", "Renovierung", "Innenausbau"]
+}
+</script>
+{% endblock %}
