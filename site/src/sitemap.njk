@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% if site.isProduction %}
+  <url><loc>{{ site.url }}/</loc></url>
+  <url><loc>{{ site.url }}/leistungen/</loc></url>
+{% for service in services %}
+  <url><loc>{{ site.url }}/leistungen/{{ service.slug }}/</loc></url>
+{% endfor %}
+  <url><loc>{{ site.url }}/referenzen/</loc></url>
+  <url><loc>{{ site.url }}/galerie/</loc></url>
+  <url><loc>{{ site.url }}/ueber-uns/</loc></url>
+  <url><loc>{{ site.url }}/kontakt/</loc></url>
+  <url><loc>{{ site.url }}/impressum/</loc></url>
+  <url><loc>{{ site.url }}/datenschutz/</loc></url>
+{% endif %}
+</urlset>

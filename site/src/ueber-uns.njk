@@ -1,8 +1,9 @@
 ---
 layout: base.njk
 permalink: /ueber-uns/
-title: "Über uns | Dautibau | Trockenbau Düsseldorf"
-description: "Dautibau steht für Nexhbedin Dauti und jahrelange Erfahrung im Trockenbau und Innenausbau in Düsseldorf. Ein Ansprechpartner vom Aufmaß bis zur Übergabe."
+title: "Über Dautibau | Trockenbau Düsseldorf"
+description: "Dautibau wird von Nexhbedin Dauti geführt. Direkter Kontakt für Trockenbau und Innenausbau in Düsseldorf."
+bodyClass: "page-ueber-uns"
 ---
 
 <section class="page-hero">
@@ -10,37 +11,35 @@ description: "Dautibau steht für Nexhbedin Dauti und jahrelange Erfahrung im Tr
     <nav class="breadcrumb" aria-label="Brotkrumen">
       <a href="{{ '/' | url }}">Start</a>
       <span class="sep" aria-hidden="true">/</span>
-      <span class="current">Über uns</span>
+      <span class="current" aria-current="page">Über Dautibau</span>
     </nav>
-    <p class="kicker">Über uns. Düsseldorf.</p>
-    <h1>Ein Handwerker, auf den man sich verlässt.</h1>
+    <p class="kicker">Über Dautibau. Düsseldorf.</p>
+    <h1>Direkter Ansprechpartner für Ihr Ausbauprojekt.</h1>
+    <p class="hero-art-note">Atmosphärische Visualisierung. Der Baustelleneinblick darunter stammt aus dem Dautibau-Bildbestand.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="about-heading">
   <div class="shell">
     <div class="svc-detail">
       <div data-reveal>
-        <div class="frame frame-tall" style="max-width: 28rem;">
-          <span class="frame-caption">Foto folgt</span>
-        </div>
-        <p class="provenance">Nexhbedin Dauti. Inhaber. Foto folgt.</p>
+        <figure class="service-proof service-proof-about">
+          <img src="{{ '/assets/projects/project-30.webp' | url }}" alt="Neue Raumaufteilung mit Metallprofilen auf einer Dautibau-Baustelle" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption><span>Echtes Projektfoto</span>Raumaufteilung mit Metallprofilen</figcaption>
+        </figure>
       </div>
       <div data-reveal data-reveal-delay="80">
-        <p class="detail-intro" style="max-width: 30ch;">
-          Dautibau steht für Nexhbedin Dauti und jahrelange Erfahrung im Trockenbau und Innenausbau.
-        </p>
-        <p style="color: var(--ink-soft); margin-top: 1.5rem; max-width: 46ch; font-size: 1.1rem;">
-          Vom ersten Aufmaß bis zur Übergabe bleibt der Ansprechpartner derselbe. Saubere Arbeit, ehrliche Preise und Termine, die halten.
-        </p>
+        <p class="detail-intro" id="about-heading">Dautibau wird von Nexhbedin Dauti geführt.</p>
+        <p class="about-copy">Anfragen und die Abstimmung des vereinbarten Leistungsumfangs laufen direkt über ihn. So bleibt der Kontaktweg kurz und Rückfragen können ohne Umweg geklärt werden.</p>
 
-        <p class="kicker" style="margin: 2.5rem 0 1rem;">Wofür wir stehen</p>
+        <h2 class="kicker about-values-title">Wofür Dautibau steht</h2>
         <ul class="svc-points">
-          <li><span class="pt-num">01</span><span class="pt-text">Ein Ansprechpartner vom Aufmaß bis zur Übergabe.</span></li>
-          <li><span class="pt-num">02</span><span class="pt-text">Saubere Baustelle und ein bewohnbares Zuhause.</span></li>
-          <li><span class="pt-num">03</span><span class="pt-text">Termine, die halten. Wir sagen, wann wir kommen.</span></li>
-          <li><span class="pt-num">04</span><span class="pt-text">Festpreis vorab. Kostenlos und unverbindlich.</span></li>
+          <li><span class="pt-num">01</span><span class="pt-text">Direkter Kontakt zum Inhaber.</span></li>
+          <li><span class="pt-num">02</span><span class="pt-text">Leistungsumfang und Aufbau werden vor Beginn abgestimmt.</span></li>
+          <li><span class="pt-num">03</span><span class="pt-text">Zeitfenster und Arbeitsfolge werden projektbezogen besprochen.</span></li>
+          <li><span class="pt-num">04</span><span class="pt-text">Das Angebot hält den vereinbarten Umfang nachvollziehbar fest.</span></li>
         </ul>
+        <p class="service-scope-note">Belegbare Angaben zu Qualifikationen, Berufsjahren und Betriebshaftpflicht werden erst nach dokumentierter Bestätigung veröffentlicht.</p>
       </div>
     </div>
   </div>
@@ -50,12 +49,12 @@ description: "Dautibau steht für Nexhbedin Dauti und jahrelange Erfahrung im Tr
   <div class="shell band-inner on-dark">
     <div data-reveal>
       <p class="kicker">Kennenlernen</p>
-      <h2 id="about-cta">Lernen wir uns bei Ihnen kennen.</h2>
-      <p>Ein Anruf reicht. Wir kommen vorbei, machen das Aufmaß und Sie bekommen ein klares Angebot.</p>
+      <h2 id="about-cta">Besprechen wir Ihr Vorhaben.</h2>
+      <p>Schildern Sie kurz den Bestand und die gewünschte Veränderung. Fotos und ungefähre Maße helfen bei der ersten Einordnung.</p>
     </div>
     <div class="band-cta" data-reveal data-reveal-delay="80">
-      <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
-      <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+      <a href="{{ site.phoneHref }}" class="btn btn-ghost">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
     </div>
   </div>
 </section>

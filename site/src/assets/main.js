@@ -7,23 +7,43 @@
   var toggle = document.getElementById("navToggle");
   var mobileNav = document.getElementById("mobileNav");
   if (toggle && mobileNav) {
+    var closeMobileNav = function (restoreFocus) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Menü öffnen");
+      mobileNav.hidden = true;
+      if (restoreFocus) toggle.focus();
+    };
+
+    var openMobileNav = function () {
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Menü schließen");
+      mobileNav.hidden = false;
+      var firstLink = mobileNav.querySelector("a");
+      if (firstLink) firstLink.focus();
+    };
+
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      toggle.setAttribute("aria-label", open ? "Menü öffnen" : "Menü schließen");
-      if (open) {
-        mobileNav.hidden = true;
-      } else {
-        mobileNav.hidden = false;
-      }
+      if (open) closeMobileNav(false);
+      else openMobileNav();
     });
+
     mobileNav.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Menü öffnen");
-        mobileNav.hidden = true;
+      if (e.target.closest("a")) closeMobileNav(false);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        closeMobileNav(true);
       }
     });
+
+    var desktopQuery = window.matchMedia("(min-width: 981px)");
+    var resetNavAtDesktop = function (e) {
+      if (e.matches) closeMobileNav(false);
+    };
+    if (desktopQuery.addEventListener) desktopQuery.addEventListener("change", resetNavAtDesktop);
+    else desktopQuery.addListener(resetNavAtDesktop);
   }
 
   /* -------- Sticky header compacting -------- */
@@ -35,6 +55,16 @@
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* -------- Mobile quick-contact bar -------- */
+  var mobileBar = document.querySelector(".mobile-bar");
+  if (mobileBar) {
+    var onMobileBarScroll = function () {
+      mobileBar.classList.toggle("is-visible", window.scrollY > 420);
+    };
+    onMobileBarScroll();
+    window.addEventListener("scroll", onMobileBarScroll, { passive: true });
   }
 
   /* -------- Scroll reveal -------- */
@@ -81,33 +111,10 @@
   var track = document.querySelector(".marquee-track");
   if (track && !reduceMotion) {
     track.innerHTML = track.innerHTML + track.innerHTML;
-    track.setAttribute("aria-hidden", "false");
+    // The repeated ticker is decorative and must stay out of the accessibility tree.
+    track.setAttribute("aria-hidden", "true");
   }
 
-  /* -------- Lenis smooth scroll (gated) -------- */
-  if (!reduceMotion && typeof window.Lenis === "function") {
-    var lenis = new window.Lenis({
-      duration: 1.05,
-      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-      smoothWheel: true,
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      a.addEventListener("click", function (e) {
-        var id = a.getAttribute("href");
-        if (id.length > 1) {
-          var target = document.querySelector(id);
-          if (target) {
-            e.preventDefault();
-            lenis.scrollTo(target, { offset: -90 });
-          }
-        }
-      });
-    });
-  }
+  /* Native browser scrolling is intentional. A smooth-scroll interception
+     library previously made wheel and touch input feel delayed. */
 })();

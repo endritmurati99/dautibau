@@ -3,6 +3,7 @@ layout: base.njk
 permalink: /leistungen/
 title: "Leistungen | Trockenbau und Innenausbau Düsseldorf | Dautibau"
 description: "Alle Leistungen von Dautibau in Düsseldorf. Trockenbau, Trennwände, abgehängte Decken, Spachtelarbeiten Q1 bis Q4, Bodenverlegung, Dämmung und Renovierung."
+bodyClass: "page-leistungen"
 ---
 
 <section class="page-hero">
@@ -10,11 +11,12 @@ description: "Alle Leistungen von Dautibau in Düsseldorf. Trockenbau, Trennwän
     <nav class="breadcrumb" aria-label="Brotkrumen">
       <a href="{{ '/' | url }}">Start</a>
       <span class="sep" aria-hidden="true">/</span>
-      <span class="current">Leistungen</span>
+      <span class="current" aria-current="page">Leistungen</span>
     </nav>
     <p class="kicker">Leistungen. Düsseldorf und Umgebung.</p>
-    <h1>Ein Gewerk. Ein Verantwortlicher.</h1>
-    <p class="page-lead">Von der Trennwand bis zum fertigen Boden. Sechs Leistungen, sauber ausgeführt und aus einer Hand.</p>
+    <h1>Sechs Bereiche. Direkt abgestimmt.</h1>
+    <p class="page-lead">Von der Raumaufteilung bis zum Boden: Der konkrete Umfang wird passend zu Bestand und Vorhaben vereinbart.</p>
+    <p class="hero-art-note">Atmosphärische Visualisierung. Jede Detailseite zeigt einen echten Baustelleneinblick.</p>
   </div>
 </section>
 
@@ -22,16 +24,14 @@ description: "Alle Leistungen von Dautibau in Düsseldorf. Trockenbau, Trennwän
   <div class="shell">
     <div class="svc-grid">
       {% for s in services %}
-      <article class="svc-card" data-reveal data-reveal-delay="{{ loop.index0 * 60 }}">
+      <a class="svc-card" href="{{ ('/leistungen/' + s.slug + '/') | url }}" aria-labelledby="service-{{ loop.index }}" data-reveal data-reveal-delay="{{ loop.index0 * 60 }}">
         <span class="svc-num">{{ s.num }}</span>
-        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: 1.55rem; line-height: 1.08;">{{ s.teaserTitle }}</h2>
+        <h2 id="service-{{ loop.index }}" style="font-family: var(--font-display); font-weight: 500; font-size: 1.55rem; line-height: 1.08;">{{ s.teaserTitle }}</h2>
         <p>{{ s.teaserText }}</p>
-        <a href="{{ ('/leistungen/' + s.slug + '/') | url }}" class="link-draw">
+        <span class="link-draw">
           Mehr dazu <span class="arrow" aria-hidden="true">→</span>
-          <span class="visually-hidden"> zu {{ s.teaserTitle }}</span>
-        </a>
-        <a class="stretch" href="{{ ('/leistungen/' + s.slug + '/') | url }}" aria-label="{{ s.teaserTitle }}" tabindex="-1"></a>
-      </article>
+        </span>
+      </a>
       {% endfor %}
     </div>
   </div>
@@ -42,11 +42,11 @@ description: "Alle Leistungen von Dautibau in Düsseldorf. Trockenbau, Trennwän
     <div data-reveal>
       <p class="kicker">Nicht sicher</p>
       <h2 id="lst-cta">Nicht sicher, was Sie brauchen?</h2>
-      <p>Rufen Sie an. Wir schauen uns Ihre Räume an und sagen ehrlich, was sinnvoll ist.</p>
+      <p>Rufen Sie an oder senden Sie Fotos und ungefähre Maße. So lässt sich der nächste Schritt direkt abstimmen.</p>
     </div>
     <div class="band-cta" data-reveal data-reveal-delay="80">
-      <a href="{{ site.phoneHref }}" class="btn btn-primary">Jetzt anrufen</a>
-      <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">Per WhatsApp schreiben</a>
+      <a href="{{ site.phoneHref }}" class="btn btn-ghost">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
     </div>
   </div>
 </section>

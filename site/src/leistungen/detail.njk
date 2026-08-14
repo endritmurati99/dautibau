@@ -17,7 +17,7 @@ eleventyComputed:
       <span class="sep" aria-hidden="true">/</span>
       <a href="{{ '/leistungen/' | url }}">Leistungen</a>
       <span class="sep" aria-hidden="true">/</span>
-      <span class="current">{{ service.teaserTitle }}</span>
+      <span class="current" aria-current="page">{{ service.teaserTitle }}</span>
     </nav>
     <p class="kicker">Leistung {{ service.num }}. Düsseldorf.</p>
     <h1>{{ service.title }}</h1>
@@ -25,19 +25,19 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="service-scope">
   <div class="shell">
     <div class="svc-detail">
       <div data-reveal>
-        <p class="detail-intro">{{ service.intro }}</p>
-        <div class="frame frame-tall" style="margin-top: 2.25rem; max-width: 26rem;">
-          <span class="frame-caption">Projektfoto folgt</span>
-        </div>
-        <p class="provenance">Referenz: {{ service.teaserTitle }}. Raum Düsseldorf. Foto folgt.</p>
+        <figure class="service-proof">
+          <img src="{{ service.image | url }}" alt="{{ service.imageAlt }}" width="{{ service.imageWidth }}" height="{{ service.imageHeight }}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption><span>Echtes Projektfoto</span>{{ service.imageCaption }}</figcaption>
+        </figure>
+        <p class="provenance">Baustelleneinblick aus dem bereitgestellten Dautibau-Bildbestand. Der konkrete Leistungsumfang wird für jedes Projekt separat vereinbart.</p>
       </div>
 
       <div data-reveal data-reveal-delay="80">
-        <p class="kicker" style="margin-bottom: 1.5rem;">Das steckt drin</p>
+        <h2 class="kicker service-scope-title" id="service-scope">Das kann dazugehören</h2>
         <ul class="svc-points">
           {% for pt in service.points %}
           <li>
@@ -47,7 +47,9 @@ eleventyComputed:
           {% endfor %}
         </ul>
 
-        <p class="kicker" style="margin: 2.5rem 0 1rem;">Weitere Leistungen</p>
+        <p class="service-scope-note">Welche Arbeiten sinnvoll und möglich sind, klären wir anhand des Bestands, der gewünschten Nutzung und des vereinbarten Aufbaus.</p>
+
+        <h2 class="kicker service-other-title">Weitere Leistungen</h2>
         <div class="svc-other">
           {% for s in services %}
           <a href="{{ ('/leistungen/' + s.slug + '/') | url }}"
@@ -62,13 +64,16 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="service-cta">
   <div class="shell">
     <div class="cta-inline" data-reveal>
-      <h3>{{ service.title }} zum Festpreis. Kostenlos und unverbindlich.</h3>
+      <div>
+        <h2 id="service-cta">{{ service.teaserTitle }} für Ihr Projekt besprechen.</h2>
+        <p>Fotos, ungefähre Maße und eine kurze Beschreibung helfen bei der ersten Einordnung.</p>
+      </div>
       <div class="cta-inline-row">
         <a href="{{ site.phoneHref }}" class="btn btn-ink">Jetzt anrufen</a>
-        <a href="{{ site.whatsapp }}" class="btn btn-ghost" rel="noopener">WhatsApp</a>
+        <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
       </div>
     </div>
   </div>

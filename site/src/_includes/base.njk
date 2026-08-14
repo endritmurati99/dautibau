@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="robots" content="{{ site.robots }}">
+  <meta name="theme-color" content="#17140f">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  {% if site.url %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dautibau">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:locale" content="de_DE">
+  {% if site.url %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.socialImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dautibau – Trockenbau und Innenausbau in Düsseldorf">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
-
+  <link rel="preload" href="{{ '/assets/fonts/inter-normal-400.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2317140F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23F4F1EA' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="{{ '/assets/dautibau-mark.svg' | url }}" type="image/svg+xml">
   {% block head %}{% endblock %}
 </head>
 <body class="{{ bodyClass }}">
@@ -27,8 +37,9 @@
 
   <header class="site-header" id="siteHeader" data-header>
     <div class="shell header-inner">
-      <a href="{{ '/' | url }}" class="wordmark" aria-label="Dautibau Startseite">
-        Dautibau<span class="wordmark-dot">.</span>
+      <a href="{{ '/' | url }}" class="wordmark brand-lockup" aria-label="Dautibau Startseite">
+        <img src="{{ '/assets/dautibau-mark.svg' | url }}" class="brand-mark" alt="" width="52" height="37">
+        <span>Dautibau<span class="wordmark-dot">.</span></span>
       </a>
       <nav class="primary-nav" aria-label="Hauptnavigation">
         <ul>
@@ -43,9 +54,9 @@
           {% endfor %}
         </ul>
       </nav>
-      <a href="{{ site.phoneHref }}" class="btn btn-primary header-cta">
-        <span class="mono">Anrufen</span>
-        <span aria-hidden="true" class="header-cta-num">{{ site.phoneDisplay }}</span>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp header-cta" rel="noopener">
+        <span class="mono">WhatsApp-Projektanfrage</span>
+        <span aria-hidden="true" class="header-cta-num">Direkt schreiben</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -68,8 +79,11 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div class="footer-brand">
-        <a href="{{ '/' | url }}" class="wordmark wordmark-lg">Dautibau<span class="wordmark-dot">.</span></a>
-        <p class="footer-tag">Trockenbau und Innenausbau in Düsseldorf. Ein Ansprechpartner vom Aufmaß bis zur Übergabe.</p>
+        <a href="{{ '/' | url }}" class="wordmark wordmark-lg brand-lockup">
+          <img src="{{ '/assets/dautibau-mark.svg' | url }}" class="brand-mark brand-mark-footer" alt="" width="60" height="42">
+          <span>Dautibau<span class="wordmark-dot">.</span></span>
+        </a>
+        <p class="footer-tag">Trockenbau und Innenausbau in Düsseldorf. Direkter Kontakt per Telefon oder WhatsApp.</p>
         <p class="mono footer-catch">Gerade Wände sind kein Zufall.</p>
       </div>
 
@@ -87,6 +101,7 @@
         <ul class="footer-list">
           <li><a href="{{ '/leistungen/' | url }}">Leistungen</a></li>
           <li><a href="{{ '/referenzen/' | url }}">Referenzen</a></li>
+          <li><a href="{{ '/galerie/' | url }}">Galerie</a></li>
           <li><a href="{{ '/ueber-uns/' | url }}">Über uns</a></li>
           <li><a href="{{ '/kontakt/' | url }}">Kontakt</a></li>
           <li><a href="{{ '/impressum/' | url }}">Impressum</a></li>
@@ -122,7 +137,6 @@
     </a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="{{ '/assets/main.js' | url }}" defer></script>
 </body>
 </html>

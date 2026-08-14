@@ -2,7 +2,7 @@
 layout: base.njk
 permalink: /impressum/
 title: "Impressum | Dautibau | Düsseldorf"
-description: "Impressum von Dautibau, Inhaber Nexhbedin Dauti, Münsterstraße 360, 40470 Düsseldorf. Angaben nach §5 TMG. Vorläufige Fassung."
+description: "Impressum von Dautibau, Inhaber Nexhbedin Dauti, Münsterstraße 360, 40470 Düsseldorf. Angaben nach § 5 DDG."
 ---
 
 <section class="page-hero">
@@ -10,48 +10,47 @@ description: "Impressum von Dautibau, Inhaber Nexhbedin Dauti, Münsterstraße 3
     <nav class="breadcrumb" aria-label="Brotkrumen">
       <a href="{{ '/' | url }}">Start</a>
       <span class="sep" aria-hidden="true">/</span>
-      <span class="current">Impressum</span>
+      <span class="current" aria-current="page">Impressum</span>
     </nav>
-    <p class="kicker">Pflichtangaben. §5 TMG.</p>
+    <p class="kicker">Pflichtangaben. § 5 DDG.</p>
     <h1>Impressum.</h1>
   </div>
 </section>
 
 <section class="section">
   <div class="shell">
-    <div class="notice">
-      <p><strong>Vorläufige Fassung.</strong> Einzelne Angaben werden ergänzt, sobald sie vom Inhaber bestätigt sind.</p>
+    <div class="notice notice-warning" role="note" aria-labelledby="legal-status">
+      <p id="legal-status"><strong>Interner Prüfstand – nicht zur Veröffentlichung freigegeben.</strong> Die bekannten Angaben sind eingetragen. Die unten genannten Unternehmensdaten müssen vor dem Produktionsstart dokumentiert bestätigt und rechtlich geprüft werden.</p>
     </div>
 
     <div class="prose">
-      <h2>Angaben nach §5 TMG</h2>
+      <h2>Angaben nach § 5 DDG</h2>
       <p>
         Dautibau<br>
-        Inhaber: Nexhbedin Dauti<br>
-        Münsterstraße 360<br>
-        40470 Düsseldorf
+        Inhaber: {{ site.owner }}<br>
+        {{ site.street }}<br>
+        {{ site.zip }} {{ site.city }}
       </p>
 
       <h2>Kontakt</h2>
-      <p>
-        Telefon: <a href="{{ site.phoneHref }}">0176 23939474</a><br>
-        E-Mail: <span class="todo">[E-Mail folgt]</span>
-      </p>
+      <p>Telefon: <a href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a></p>
+      <p class="todo"><strong>Vor Veröffentlichung ergänzen:</strong> eine unmittelbar erreichbare geschäftliche E-Mail-Adresse.</p>
 
-      <h2>Umsatzsteuer</h2>
-      <p><span class="todo">[Kleinunternehmer nach §19 UStG oder USt-IdNr folgt]</span></p>
-
-      <h2>Berufsbezeichnung und Handwerksrolle</h2>
-      <p><span class="todo">[Angabe folgt. Eintrag Handwerksrolle bei der Handwerkskammer Düsseldorf.]</span></p>
+      <h2>Noch zu bestätigende Pflichtangaben</h2>
+      <ul class="legal-checklist">
+        <li>Rechtsform und gegebenenfalls Handelsregister, Registernummer und Registergericht.</li>
+        <li>Umsatzsteuer-Identifikationsnummer oder bestätigter steuerlicher Status, soweit veröffentlichungspflichtig.</li>
+        <li>Genaue angemeldete Tätigkeiten sowie Handwerkskammer- und Handwerksrollenstatus; daraus folgende berufsrechtliche Angaben.</li>
+        <li>Unternehmensgröße und Erklärung zur Teilnahme an Verbraucherstreitbeilegungsverfahren nach § 36 VSBG, soweit anwendbar.</li>
+      </ul>
 
       <h2>Verantwortlich für den Inhalt</h2>
-      <p>Nexhbedin Dauti, Anschrift wie oben.</p>
+      <p>{{ site.owner }}, Anschrift wie oben.</p>
 
-      <h2>Haftung für Inhalte</h2>
-      <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+      <h2>Externe Links</h2>
+      <p>Diese Website kann Links zu externen Angeboten enthalten. Beim Aufruf gelten die Datenschutz- und Nutzungsbedingungen des jeweiligen Anbieters.</p>
 
-      <h2>Haftung für Links</h2>
-      <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+      <p class="legal-updated">Prüfstand: 1. August 2026. Diese Seite ist eine Vollständigkeitsvorbereitung und keine Rechtsberatung.</p>
     </div>
   </div>
 </section>
