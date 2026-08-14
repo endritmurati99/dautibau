@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.lux-run/
+
+# Working material — backed up in the private dautibau-workspace repository, never published.
+assets/project-photos/raw/
+assets/project-photos/review/
+assets/generation/
+assets/brand/
+qa/
+scripts/
