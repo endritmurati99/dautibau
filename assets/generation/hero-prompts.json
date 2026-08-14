@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "start",
+    "page": "Start",
+    "prompt": "Wide editorial architectural photograph of a beautifully finished contemporary interior renovation in Düsseldorf, Germany. Precise gypsum-board walls, crisp shadow gaps, clean recessed ceiling lines, warm natural daylight, subtle mineral and plaster textures, believable high-end craftsmanship, calm neutral paper-black palette with one very restrained blue-green detail. No people, no logos, no signs, no text, no watermark. Photorealistic 35mm architectural photography, tactile and understated, not glossy real-estate advertising. Compose the room with generous low-contrast negative space on the left for a German website headline and visual detail on the right."
+  },
+  {
+    "slug": "leistungen",
+    "page": "Leistungen",
+    "prompt": "Wide editorial architectural photograph showing the precision of professional drywall and interior construction: perfectly aligned metal stud framing transitioning into a finished gypsum wall, laser-level line, clean ceiling detail, organized tools, refined craftsmanship, realistic German building site, warm directional daylight. Neutral mineral colors with restrained dark green accents, no workers, no logos, no signs, no text, no watermark. Photorealistic documentary architecture style, premium but believable, composition with calm negative space on the left and construction detail on the right."
+  },
+  {
+    "slug": "referenzen",
+    "page": "Referenzen",
+    "prompt": "Wide editorial photograph of a completed residential interior after renovation in Düsseldorf: seamless white walls, a precisely finished ceiling, subtle indirect lighting, warm oak floor, one dark green architectural accent, quiet geometry and immaculate junction details. No furniture showroom styling, no people, no logos, no signs, no text, no watermark. Photorealistic architectural documentation, restrained and tactile, slightly cinematic natural light, broad composition with negative space on the left for a page title."
+  },
+  {
+    "slug": "ueber-uns",
+    "page": "Über uns",
+    "prompt": "Wide documentary-style close-up photograph showing only gloved hands and forearms checking a freshly finished gypsum wall with a long spirit level, frame cropped below the shoulders so no face, head, body identity or recognizable worker is visible. Careful professional workmanship, clean unbranded workwear, authentic German interior renovation setting, precise edges and soft daylight. No logos, no signs, no text, no watermark. Photorealistic, honest and understated rather than staged, neutral mineral palette with a restrained green detail, composition weighted to the right with calm negative space on the left for a website headline."
+  },
+  {
+    "slug": "kontakt",
+    "page": "Kontakt",
+    "prompt": "Wide editorial photograph of an interior project consultation without identifiable people: a clean unfinished room, laser distance meter, folded blank floor plan with no readable text, pencil, material samples and warm daylight across a precisely prepared wall. Authentic German renovation atmosphere, calm and trustworthy, neutral paper-black palette with a restrained green accent. No logos, no signs, no readable text, no watermark. Photorealistic architectural documentary style, composition with visual detail on the right and generous negative space on the left for contact copy."
+  }
+]

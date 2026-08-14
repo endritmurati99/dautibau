@@ -1,0 +1,56 @@
+---
+layout: base.njk
+permalink: /impressum/
+title: "Impressum | Dautibau | Düsseldorf"
+description: "Impressum von Dautibau, Inhaber Nexhbedin Dauti, Münsterstraße 360, 40470 Düsseldorf. Angaben nach § 5 DDG."
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Impressum</span>
+    </nav>
+    <p class="kicker">Pflichtangaben. § 5 DDG.</p>
+    <h1>Impressum.</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="notice notice-warning" role="note" aria-labelledby="legal-status">
+      <p id="legal-status"><strong>Interner Prüfstand – nicht zur Veröffentlichung freigegeben.</strong> Die bekannten Angaben sind eingetragen. Die unten genannten Unternehmensdaten müssen vor dem Produktionsstart dokumentiert bestätigt und rechtlich geprüft werden.</p>
+    </div>
+
+    <div class="prose">
+      <h2>Angaben nach § 5 DDG</h2>
+      <p>
+        Dautibau<br>
+        Inhaber: {{ site.owner }}<br>
+        {{ site.street }}<br>
+        {{ site.zip }} {{ site.city }}
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>Telefon: <a href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a></p>
+      <p class="todo"><strong>Vor Veröffentlichung ergänzen:</strong> eine unmittelbar erreichbare geschäftliche E-Mail-Adresse.</p>
+
+      <h2>Noch zu bestätigende Pflichtangaben</h2>
+      <ul class="legal-checklist">
+        <li>Rechtsform und gegebenenfalls Handelsregister, Registernummer und Registergericht.</li>
+        <li>Umsatzsteuer-Identifikationsnummer oder bestätigter steuerlicher Status, soweit veröffentlichungspflichtig.</li>
+        <li>Genaue angemeldete Tätigkeiten sowie Handwerkskammer- und Handwerksrollenstatus; daraus folgende berufsrechtliche Angaben.</li>
+        <li>Unternehmensgröße und Erklärung zur Teilnahme an Verbraucherstreitbeilegungsverfahren nach § 36 VSBG, soweit anwendbar.</li>
+      </ul>
+
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>{{ site.owner }}, Anschrift wie oben.</p>
+
+      <h2>Externe Links</h2>
+      <p>Diese Website kann Links zu externen Angeboten enthalten. Beim Aufruf gelten die Datenschutz- und Nutzungsbedingungen des jeweiligen Anbieters.</p>
+
+      <p class="legal-updated">Prüfstand: 1. August 2026. Diese Seite ist eine Vollständigkeitsvorbereitung und keine Rechtsberatung.</p>
+    </div>
+  </div>
+</section>

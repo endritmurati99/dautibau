@@ -1,0 +1,69 @@
+---
+layout: base.njk
+permalink: /kontakt/
+title: "Kontakt | Dautibau | Trockenbau Düsseldorf"
+description: "Dautibau in Düsseldorf direkt per Telefon oder WhatsApp kontaktieren. Adresse: Münsterstraße 360, 40470 Düsseldorf."
+bodyClass: "page-kontakt"
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Kontakt</span>
+    </nav>
+    <p class="kicker">Kontakt. Düsseldorf und Umgebung.</p>
+    <h1>Projekt direkt besprechen.</h1>
+    <p class="page-lead">Rufen Sie an oder senden Sie per WhatsApp Fotos, ungefähre Maße und eine kurze Beschreibung.</p>
+    <p class="hero-art-note">Atmosphärische Visualisierung. Die Kontaktwege darunter führen direkt zu Dautibau.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="contact-heading">
+  <div class="shell">
+    <div class="contact-grid">
+      <div data-reveal>
+        <p class="kicker">Direkter Kontakt</p>
+        <h2 id="contact-heading" class="visually-hidden">Dautibau kontaktieren</h2>
+        <a href="{{ site.phoneHref }}" class="big-phone">{{ site.phoneDisplay }}</a>
+        <div class="cta-inline-row contact-primary-actions">
+          <a href="{{ site.phoneHref }}" class="btn btn-ink">Jetzt anrufen</a>
+          <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
+        </div>
+
+        <div class="contact-block">
+          <h2>Adresse</h2>
+          <p class="contact-meta">
+            Dautibau<br>
+            {{ site.street }}<br>
+            {{ site.zip }} {{ site.city }}
+          </p>
+          <p><a class="link-draw" href="https://www.openstreetmap.org/search?query=M%C3%BCnsterstra%C3%9Fe%20360%2C%2040470%20D%C3%BCsseldorf" rel="external noopener">Adresse in OpenStreetMap öffnen <span class="arrow" aria-hidden="true">↗</span></a></p>
+          <p class="privacy-hint">Die externe Karte wird erst nach Ihrem Klick geöffnet.</p>
+        </div>
+
+        <div class="contact-block">
+          <h2>Einzugsgebiet</h2>
+          <p class="contact-meta">{{ site.region }}. Ob Ihr Projekt im Einsatzgebiet liegt, klären wir direkt bei der Anfrage.</p>
+        </div>
+      </div>
+
+      <aside class="request-card" data-reveal data-reveal-delay="80" aria-labelledby="request-heading">
+        <p class="kicker">Für die erste Einordnung</p>
+        <h2 id="request-heading">Das hilft bei Ihrer Anfrage.</h2>
+        <ol class="request-list">
+          <li><span>01</span><div><strong>Fotos</strong><p>Ein bis drei Bilder vom Raum oder Bauteil.</p></div></li>
+          <li><span>02</span><div><strong>Maße</strong><p>Ungefähre Länge, Breite und Höhe, soweit bekannt.</p></div></li>
+          <li><span>03</span><div><strong>Vorhaben</strong><p>Kurz beschreiben, was verändert oder aufgebaut werden soll.</p></div></li>
+          <li><span>04</span><div><strong>Ort</strong><p>Stadtteil oder Projektort für die Einsatzplanung.</p></div></li>
+        </ol>
+        <p class="request-note">Bitte senden Sie zunächst keine Ausweise, Vertragsunterlagen oder andere sensiblen Daten per WhatsApp.</p>
+        <div class="request-actions">
+          <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">WhatsApp-Anfrage starten</a>
+          <a href="{{ site.phoneHref }}" class="btn btn-ink">Telefonisch besprechen</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

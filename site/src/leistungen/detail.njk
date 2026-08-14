@@ -1,0 +1,80 @@
+---
+layout: base.njk
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/leistungen/{{ service.slug }}/"
+eleventyComputed:
+  title: "{{ service.teaserTitle }} in Düsseldorf | Dautibau"
+  description: "{{ service.metaDescription }}"
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <a href="{{ '/leistungen/' | url }}">Leistungen</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current" aria-current="page">{{ service.teaserTitle }}</span>
+    </nav>
+    <p class="kicker">Leistung {{ service.num }}. Düsseldorf.</p>
+    <h1>{{ service.title }}</h1>
+    <p class="page-lead">{{ service.intro }}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="service-scope">
+  <div class="shell">
+    <div class="svc-detail">
+      <div data-reveal>
+        <figure class="service-proof">
+          <img src="{{ service.image | url }}" alt="{{ service.imageAlt }}" width="{{ service.imageWidth }}" height="{{ service.imageHeight }}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption><span>Echtes Projektfoto</span>{{ service.imageCaption }}</figcaption>
+        </figure>
+        <p class="provenance">Baustelleneinblick aus dem bereitgestellten Dautibau-Bildbestand. Der konkrete Leistungsumfang wird für jedes Projekt separat vereinbart.</p>
+      </div>
+
+      <div data-reveal data-reveal-delay="80">
+        <h2 class="kicker service-scope-title" id="service-scope">Das kann dazugehören</h2>
+        <ul class="svc-points">
+          {% for pt in service.points %}
+          <li>
+            <span class="pt-num">{{ loop.index | pad2 }}</span>
+            <span class="pt-text">{{ pt }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <p class="service-scope-note">Welche Arbeiten sinnvoll und möglich sind, klären wir anhand des Bestands, der gewünschten Nutzung und des vereinbarten Aufbaus.</p>
+
+        <h2 class="kicker service-other-title">Weitere Leistungen</h2>
+        <div class="svc-other">
+          {% for s in services %}
+          <a href="{{ ('/leistungen/' + s.slug + '/') | url }}"
+             class="svc-chip{% if s.slug == service.slug %} is-current{% endif %}"
+             {% if s.slug == service.slug %}aria-current="page"{% endif %}>
+            {{ s.teaserTitle }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="service-cta">
+  <div class="shell">
+    <div class="cta-inline" data-reveal>
+      <div>
+        <h2 id="service-cta">{{ service.teaserTitle }} für Ihr Projekt besprechen.</h2>
+        <p>Fotos, ungefähre Maße und eine kurze Beschreibung helfen bei der ersten Einordnung.</p>
+      </div>
+      <div class="cta-inline-row">
+        <a href="{{ site.phoneHref }}" class="btn btn-ink">Jetzt anrufen</a>
+        <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
+      </div>
+    </div>
+  </div>
+</section>
