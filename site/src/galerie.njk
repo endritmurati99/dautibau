@@ -1,0 +1,80 @@
+---
+layout: base.njk
+permalink: /galerie/
+title: "Galerie | Echte Projektbilder | Dautibau"
+description: "Galerie mit echten Dautibau-Projektfotos aus Trockenbau, Innenausbau, Deckenbau und Spachtelarbeiten."
+bodyClass: "page-galerie"
+---
+
+<section class="page-hero">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Brotkrumen">
+      <a href="{{ '/' | url }}">Start</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="current">Galerie</span>
+    </nav>
+    <p class="kicker">Echte Projektbilder.</p>
+    <h1>Galerie.</h1>
+    <p class="page-lead">Ein direkter Überblick über Trockenbau, Innenausbau, Decken, Spachtelarbeiten und laufende Baustellen.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="compare-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="h-section head-title" id="compare-heading">Vorher und Nachher.</h2>
+      <p class="head-lead">Der gleiche Aufzuganschluss vor und nach den Anschluss- und Spachtelarbeiten.</p>
+    </div>
+    <div class="before-after-grid">
+      <figure class="project-proof" data-reveal>
+        <div class="project-proof-media">
+          <img src="{{ '/assets/projects/project-18.webp' | url }}" alt="Aufzugöffnung vor den Anschlussarbeiten" width="1200" height="1600" loading="lazy" decoding="async">
+          <span class="project-stage">Vorher</span>
+        </div>
+        <figcaption>Offene und noch unbearbeitete Wandanschlüsse.</figcaption>
+      </figure>
+      <figure class="project-proof" data-reveal data-reveal-delay="80">
+        <div class="project-proof-media">
+          <img src="{{ '/assets/projects/project-17.webp' | url }}" alt="Aufzugöffnung nach den Anschluss- und Spachtelarbeiten" width="1200" height="1600" loading="lazy" decoding="async">
+          <span class="project-stage">Nachher</span>
+        </div>
+        <figcaption>Sauber angearbeitete und gespachtelte Laibung.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-section" aria-labelledby="gallery-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="h-section head-title" id="gallery-heading">Projektübersicht.</h2>
+      <p class="head-lead">30 ausgewählte Aufnahmen aus echten Projekten. Dubletten und Bilder mit klar erkennbaren Personen wurden nicht übernommen.</p>
+    </div>
+    <div class="project-gallery">
+      {% for photo in gallery %}
+      <figure class="gallery-card gallery-{{ photo.orientation }}" data-reveal data-reveal-delay="{{ (loop.index0 % 4) * 40 }}">
+        <a href="{{ photo.src | url }}" target="_blank" rel="noopener" aria-label="{{ photo.caption }} in voller Größe öffnen">
+          <img src="{{ photo.src | url }}" alt="{{ photo.alt }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" decoding="async">
+        </a>
+        <figcaption>{{ photo.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="gallery-cta">
+  <div class="shell band-inner on-dark">
+    <div data-reveal>
+      <p class="kicker">Ihr Projekt</p>
+      <h2 id="gallery-cta">Ähnliches vor?</h2>
+      <p>Schicken Sie uns ein Foto oder eine kurze Beschreibung. Wir melden uns mit einer klaren Einschätzung.</p>
+    </div>
+    <div class="band-cta" data-reveal data-reveal-delay="80">
+      <a href="{{ site.phoneHref }}" class="btn btn-ghost">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Fotos per WhatsApp senden</a>
+    </div>
+  </div>
+</section>

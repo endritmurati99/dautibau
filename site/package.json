@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "SITE_ENV=preview eleventy",
+    "build:preview": "SITE_ENV=preview eleventy",
+    "build:production": "SITE_ENV=production eleventy && SITE_ENV=production node scripts/release-guard.mjs",
+    "serve": "SITE_ENV=preview eleventy --serve",
+    "verify": "node scripts/verify-site.mjs preview",
+    "verify:production": "node scripts/verify-site.mjs production",
+    "release:check": "SITE_ENV=production node scripts/release-guard.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

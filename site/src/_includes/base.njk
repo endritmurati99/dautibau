@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="{{ site.robots }}">
+  <meta name="theme-color" content="#17140f">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  {% if site.url %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dautibau">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:locale" content="de_DE">
+  {% if site.url %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.socialImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dautibau – Trockenbau und Innenausbau in Düsseldorf">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+
+  <link rel="preload" href="{{ '/assets/fonts/inter-normal-400.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+  <link rel="icon" href="{{ '/assets/dautibau-mark.svg' | url }}" type="image/svg+xml">
+  {% block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass }}">
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <header class="site-header" id="siteHeader" data-header>
+    <div class="shell header-inner">
+      <a href="{{ '/' | url }}" class="wordmark brand-lockup" aria-label="Dautibau Startseite">
+        <img src="{{ '/assets/dautibau-mark.svg' | url }}" class="brand-mark" alt="" width="52" height="37">
+        <span>Dautibau<span class="wordmark-dot">.</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <ul>
+          {% for item in site.nav %}
+          <li>
+            <a href="{{ item.url | url }}"
+               class="nav-link{% if item.url == '/' %}{% if page.url == '/' %} is-active{% endif %}{% elif page.url.startsWith(item.url) %} is-active{% endif %}"
+               {% if item.url == '/' and page.url == '/' %}aria-current="page"{% elif item.url != '/' and page.url.startsWith(item.url) %}aria-current="page"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp header-cta" rel="noopener">
+        <span class="mono">WhatsApp-Projektanfrage</span>
+        <span aria-hidden="true" class="header-cta-num">Direkt schreiben</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" hidden>
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ item.url | url }}" class="mobile-nav-link{% if item.url == '/' %}{% if page.url == '/' %} is-active{% endif %}{% elif page.url.startsWith(item.url) %} is-active{% endif %}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/kontakt/' | url }}" class="mobile-nav-link mobile-nav-cta">Kontakt aufnehmen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a href="{{ '/' | url }}" class="wordmark wordmark-lg brand-lockup">
+          <img src="{{ '/assets/dautibau-mark.svg' | url }}" class="brand-mark brand-mark-footer" alt="" width="60" height="42">
+          <span>Dautibau<span class="wordmark-dot">.</span></span>
+        </a>
+        <p class="footer-tag">Trockenbau und Innenausbau in Düsseldorf. Direkter Kontakt per Telefon oder WhatsApp.</p>
+        <p class="mono footer-catch">Gerade Wände sind kein Zufall.</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-head mono">Leistungen</h2>
+        <ul class="footer-list">
+          {% for s in services %}
+          <li><a href="{{ ('/leistungen/' + s.slug + '/') | url }}">{{ s.teaserTitle }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-head mono">Seiten</h2>
+        <ul class="footer-list">
+          <li><a href="{{ '/leistungen/' | url }}">Leistungen</a></li>
+          <li><a href="{{ '/referenzen/' | url }}">Referenzen</a></li>
+          <li><a href="{{ '/galerie/' | url }}">Galerie</a></li>
+          <li><a href="{{ '/ueber-uns/' | url }}">Über uns</a></li>
+          <li><a href="{{ '/kontakt/' | url }}">Kontakt</a></li>
+          <li><a href="{{ '/impressum/' | url }}">Impressum</a></li>
+          <li><a href="{{ '/datenschutz/' | url }}">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h2 class="footer-head mono">Kontakt</h2>
+        <ul class="footer-list">
+          <li><a href="{{ site.phoneHref }}" class="footer-phone">{{ site.phoneDisplay }}</a></li>
+          <li><a href="{{ site.whatsapp }}" rel="noopener">WhatsApp schreiben</a></li>
+          <li>{{ site.street }}</li>
+          <li>{{ site.zip }} {{ site.city }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p class="mono">© {% year %} Dautibau. Inhaber {{ site.owner }}.</p>
+      <p class="mono footer-legal">
+        <a href="{{ '/impressum/' | url }}">Impressum</a>
+        <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" aria-label="Schnellkontakt">
+    <a href="{{ site.phoneHref }}" class="mobile-bar-btn mobile-bar-call">
+      <span class="mono">Jetzt anrufen</span>
+    </a>
+    <a href="{{ site.whatsapp }}" class="mobile-bar-btn mobile-bar-wa" rel="noopener">
+      <span class="mono">WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="{{ '/assets/main.js' | url }}" defer></script>
+</body>
+</html>

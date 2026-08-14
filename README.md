@@ -1,7 +1,15 @@
-# Dautibau — Trockenbau und Innenausbau, Düsseldorf
+# DautiBau website preview
 
-Statische Website (Eleventy build). Live: https://endritmurati99.github.io/dautibau/
+This repository stores the Eleventy source for the current DautiBau design preview.
+GitHub Pages builds `site/` and publishes `site/dist/` with `noindex` preview
+directives. This is not the legally approved production release; the remaining
+release requirements are tracked in `PRODUCTION-READINESS.md`.
 
-Mehrseitig: Start, Leistungen (6 Detailseiten), Referenzen, Über uns, Kontakt, Impressum, Datenschutz.
-Deploy automatisch via GitHub Actions (.github/workflows/deploy-pages.yml) beim Push auf main.
-Quelle des Builds: lux-webflow/projects/dautibau/site (Eleventy).
+Live preview: https://endritmurati99.github.io/dautibau/
+
+```bash
+cd site
+npm ci
+npm run build
+npm run verify
+```

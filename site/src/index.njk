@@ -1,0 +1,216 @@
+---
+layout: base.njk
+permalink: /
+title: "Dautibau | Trockenbau und Innenausbau in Düsseldorf"
+description: "Trockenbau und Innenausbau in Düsseldorf: Wände, Decken, Spachtelarbeiten, Böden und Renovierung mit direktem Ansprechpartner."
+bodyClass: "page-start"
+---
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-inner">
+    <p class="kicker hero-kicker">Trockenbau und Innenausbau. Düsseldorf.</p>
+    <h1 class="hero-title" id="hero-title">Gerade Wände sind kein <span class="em">Zufall.</span></h1>
+    <div class="hero-lower">
+      <p class="hero-sub" data-reveal>
+        Dautibau baut Trockenbau, Decken und Böden, die im Streiflicht bestehen.
+        Ein Ansprechpartner vom Aufmaß bis zur Übergabe.
+      </p>
+      <div class="hero-cta-block" data-reveal data-reveal-delay="80">
+        <div class="hero-cta-row">
+          <a href="{{ site.phoneHref }}" class="btn btn-ink">Einmal anrufen</a>
+          <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Projekt per WhatsApp anfragen</a>
+        </div>
+        <p class="hero-trust">
+          Direkter Kontakt zum Inhaber.<br>
+          Angebot passend zum vereinbarten Leistungsumfang.
+        </p>
+      </div>
+    </div>
+    <p class="hero-art-note">Atmosphärische Visualisierung. Die Projektaufnahmen weiter unten zeigen echte Dautibau-Baustellen.</p>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="Warum Dautibau in Kürze">
+  <ul>
+    <li>Direkter Ansprechpartner</li>
+    <li>Klare Abstimmung</li>
+    <li>Echte Projektbilder</li>
+    <li>Telefon und WhatsApp</li>
+  </ul>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Trockenbau</span>
+    <span class="marquee-item">Trennwände</span>
+    <span class="marquee-item">Akustikdecken</span>
+    <span class="marquee-item">Spachtel Q4</span>
+    <span class="marquee-item">Vinyl</span>
+    <span class="marquee-item">Dämmung</span>
+    <span class="marquee-item">Renovierung</span>
+    <span class="marquee-item">Düsseldorf</span>
+  </div>
+</div>
+
+<!-- LEISTUNGEN TEASER -->
+<section class="section" aria-labelledby="svc-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="h-section head-title" id="svc-heading">Was wir bauen.</h2>
+      <p class="head-lead">Sechs Leistungsbereiche mit echten Baustelleneinblicken und einer eigenen Detailseite.</p>
+    </div>
+    <div class="svc-grid">
+      {% for s in services %}
+      <a class="svc-card" href="{{ ('/leistungen/' + s.slug + '/') | url }}" aria-labelledby="home-service-{{ loop.index }}" data-reveal data-reveal-delay="{{ loop.index0 * 60 }}">
+        <span class="svc-num">{{ s.num }}</span>
+        <h3 id="home-service-{{ loop.index }}">{{ s.teaserTitle }}</h3>
+        <p>{{ s.teaserText }}</p>
+        <span class="link-draw">
+          Mehr dazu <span class="arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- WARUM DAUTIBAU -->
+<section class="section" aria-labelledby="why-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="h-section head-title" id="why-heading">Warum Dautibau.</h2>
+      <p class="head-lead">Vier Punkte für eine klare und direkte Projektabstimmung.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item" data-reveal>
+        <span class="why-index">01</span>
+        <h3>Direkter Kontakt.</h3>
+        <p>Sie erreichen Dautibau per Telefon oder WhatsApp – ohne vorgeschaltetes Kontaktformular.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="60">
+        <span class="why-index">02</span>
+        <h3>Abgestimmter Ablauf.</h3>
+        <p>Arbeitsbereiche und Reihenfolge werden vor Beginn gemeinsam besprochen.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="120">
+        <span class="why-index">03</span>
+        <h3>Klare Terminabsprachen.</h3>
+        <p>Zeitfenster und Abfolge werden passend zum Projekt vereinbart.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="180">
+        <span class="why-index">04</span>
+        <h3>Nachvollziehbares Angebot.</h3>
+        <p>Der besprochene Leistungsumfang wird im Angebot festgehalten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section class="section" aria-labelledby="flow-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="h-section head-title" id="flow-heading">So läuft es ab.</h2>
+      <p class="head-lead">Vier Schritte von der ersten Anfrage bis zur gemeinsamen Abstimmung am Ende.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal>
+        <span class="step-num">01</span>
+        <h3>Projekt schildern.</h3>
+        <p>Rufen Sie an oder senden Sie per WhatsApp Fotos, ungefähre Maße und eine kurze Beschreibung.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="60">
+        <span class="step-num">02</span>
+        <h3>Aufmaß und Angebot.</h3>
+        <p>Nach Klärung der Rahmenbedingungen erhalten Sie ein Angebot zum vereinbarten Leistungsumfang.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="120">
+        <span class="step-num">03</span>
+        <h3>Ausführung nach Vereinbarung.</h3>
+        <p>Die Arbeiten orientieren sich am abgestimmten Aufbau und Ablauf.</p>
+      </div>
+      <div class="step" data-reveal data-reveal-delay="180">
+        <span class="step-num">04</span>
+        <h3>Abstimmung zum Abschluss.</h3>
+        <p>Zum Ende werden der vereinbarte Umfang und mögliche offene Punkte gemeinsam besprochen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZEN TEASER -->
+<section class="section" aria-labelledby="ref-heading">
+  <div class="shell">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="h-section head-title" id="ref-heading">Arbeit, die man sehen darf.</h2>
+      <p class="head-lead">Echte Dautibau-Projektbilder: Konstruktion, Deckenbau und saubere Oberflächen.</p>
+    </div>
+    <div class="home-proof-grid">
+      <figure class="proof-card" data-reveal>
+        <img src="{{ '/assets/projects/project-30.webp' | url }}" alt="Neue Raumaufteilung mit Metallprofilen in einem echten Dautibau-Projekt" width="1600" height="1200" loading="lazy" decoding="async">
+        <figcaption><span>01</span>Metallständerwerk</figcaption>
+      </figure>
+      <figure class="proof-card proof-card-tall" data-reveal data-reveal-delay="80">
+        <img src="{{ '/assets/projects/project-03.webp' | url }}" alt="Deckenunterkonstruktion in einem echten Dautibau-Projekt" width="1152" height="2048" loading="lazy" decoding="async">
+        <figcaption><span>02</span>Deckenunterkonstruktion</figcaption>
+      </figure>
+      <figure class="proof-card proof-card-wide" data-reveal data-reveal-delay="140">
+        <img src="{{ '/assets/projects/project-15.webp' | url }}" alt="Sauber vorbereitete Wandflächen in einem echten Dautibau-Projekt" width="2048" height="1152" loading="lazy" decoding="async">
+        <figcaption><span>03</span>Vorbereitete Wandflächen</figcaption>
+      </figure>
+    </div>
+    <p class="section-link-row">
+      <a href="{{ '/referenzen/' | url }}" class="link-draw">Referenzen und Vorher/Nachher <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="{{ '/galerie/' | url }}" class="link-draw">Zur vollständigen Galerie <span class="arrow" aria-hidden="true">→</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- KONTAKT BAND -->
+<section class="band" aria-labelledby="cta-heading">
+  <div class="shell band-inner on-dark">
+    <div data-reveal>
+      <p class="kicker">Reden wir</p>
+      <h2 id="cta-heading">Reden wir über Ihr Projekt.</h2>
+      <p>Rufen Sie an oder senden Sie Fotos und eine kurze Projektbeschreibung per WhatsApp.</p>
+    </div>
+    <div class="band-cta" data-reveal data-reveal-delay="80">
+      <a href="{{ site.phoneHref }}" class="btn btn-ghost">Jetzt anrufen</a>
+      <a href="{{ site.whatsapp }}" class="btn btn-whatsapp" rel="noopener">Per WhatsApp schreiben</a>
+    </div>
+  </div>
+</section>
+
+{% block head %}
+{% if site.url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/#business",
+  "name": "Dautibau",
+  "description": "Trockenbau und Innenausbau in Düsseldorf. Trockenbau, Trennwände, abgehängte Decken, Spachtelarbeiten, Bodenverlegung, Dämmung und Renovierung.",
+  "url": "{{ site.url }}/",
+  "telephone": "{{ site.phoneInternational }}",
+  "founder": "Nexhbedin Dauti",
+  "areaServed": "Düsseldorf und Umgebung",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Münsterstraße 360",
+    "postalCode": "40470",
+    "addressLocality": "Düsseldorf",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "knowsAbout": ["Trockenbau", "Trennwände", "Akustikdecken", "Spachtelarbeiten", "Bodenverlegung", "Dämmung", "Renovierung", "Innenausbau"]
+}
+</script>
+{% endif %}
+{% endblock %}
